@@ -46,6 +46,7 @@
     <Compile Include="ICommand.cs" />
     <Compile Include="PrintDocument.cs" />
     <Compile Include="Printer.cs" />
+    <Compile Include="PrintManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,8 +8,8 @@ namespace PrinterQueueManager
 {
     internal class Printer
     {
-        void Print(string document) => Console.WriteLine($"Drukowanie: {document}");
-        void CancelPrint(string document) => Console.WriteLine($"Zatrzymano drukowanie: {document}");
+        public void Print(string document) => Console.WriteLine($"Drukowanie: {document}");
+        public void CancelPrint(string document) => Console.WriteLine($"Zatrzymano drukowanie: {document}");
 
     }
 }

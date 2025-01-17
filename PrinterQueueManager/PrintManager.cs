@@ -8,8 +8,8 @@ namespace PrinterQueueManager
 {
     internal class PrintManager
     {
-        private readonly Queue<ICommand> printQueue;
-        private readonly Stack<ICommand> undoStack;
+        private readonly Queue<ICommand> printQueue = new Queue<ICommand>();
+        private readonly Stack<ICommand> undoStack = new Stack<ICommand>();
 
         public void Add(ICommand c)
         {
@@ -27,10 +27,11 @@ namespace PrinterQueueManager
             else Console.WriteLine("Nie ma nic do cofania");
         }
 
-        public void Process() 
+        public void Process()
         {
             var command = printQueue.Dequeue();
             command.Execute();
             undoStack.Push(command);
         }
+    }
 }
